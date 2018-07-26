@@ -1,6 +1,6 @@
 # Thor
 
-🔨 Thor is a executable binary FFmpeg for Android (with libmp3lame)
+🔨 Thor is a executable binary FFmpeg for Android (with libx264, libmp3lame)
 
 | Build Tools   | version                   |
 | ------------- | ------------------------- |
@@ -8,8 +8,8 @@
 | ndk-platform  | android-19                |
 | ndk-toolchain | arm-linux-androideabi-4.9 |
 | FFmpeg        | 3.2.12                    |
+| libx264       | commit @ 7d0ff22          |
 | libmp3lame    | 3.100                     |
-| libx264       | branch @ 7d0ff22          |
 
 ## Compile
 
