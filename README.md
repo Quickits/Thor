@@ -7,8 +7,9 @@
 | ndk           | 17.1.4828580              |
 | ndk-platform  | android-19                |
 | ndk-toolchain | arm-linux-androideabi-4.9 |
-| FFmpeg        | 3.2.4                     |
+| FFmpeg        | 3.2.12                    |
 | libmp3lame    | 3.100                     |
+| libx264       | branch @ 7d0ff22          |
 
 ## Compile
 
