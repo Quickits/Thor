@@ -8,8 +8,6 @@ CPU='cortex-a8'
 
 make clean
 
-export PKG_CONFIG_PATH=$TOOLCHAIN_PREFIX/lib/pkgconfig
-
 ./configure \
 --prefix=$BASEDIR/build/ \
 --target-os=$TARGET_OS \
@@ -19,9 +17,8 @@ export PKG_CONFIG_PATH=$TOOLCHAIN_PREFIX/lib/pkgconfig
 --cpu=$CPU \
 --sysroot=$NDK_SYSROOT \
 --extra-cflags="-I$TOOLCHAIN_PREFIX/include -pie -fPIE $CFLAGS -D__ANDROID_API__=$ANDROID_API_VERSION -U_FILE_OFFSET_BITS -Os -fPIC -DANDROID -D__thumb__ -mthumb -Wfatal-errors -Wno-deprecated -mfloat-abi=softfp -marm" \
---extra-ldflags="-L$TOOLCHAIN_PREFIX/lib $LDFLAGS -pie -fPIE" \
---extra-libs="-lgcc" \
---pkg-config=$PKG_CONFIG_PATH \
+--extra-ldflags="-L$TOOLCHAIN_PREFIX/lib -pie -fPIE $LDFLAGS " \
+--pkgconfigdir=$PKG_CONFIG_PATH \
 --enable-version3 \
 --enable-hardcoded-tables \
 --disable-debug \
@@ -30,7 +27,8 @@ export PKG_CONFIG_PATH=$TOOLCHAIN_PREFIX/lib/pkgconfig
 --disable-ffserver \
 --enable-gpl \
 --enable-libmp3lame \
---disable-yasm \
+--enable-libx264 \
+--enable-yasm \
 --disable-doc \
 --disable-asm \
 --disable-shared \
